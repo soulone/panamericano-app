@@ -1,0 +1,47 @@
+<html>
+  <header>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="favicon.ico">
+    <title>
+      deportes
+    </title>
+    {% load bootstrap4 %}
+    {% bootstrap_css %}
+  </header>
+  <body>
+        <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                  <h1 class="display-4 font-weight-bold">Juegos Panamericanos <span class="text-danger">2019</span></h1>
+                  <p class="lead">Desde los Juegos Olímpicos griegos de 776 a.C., los atletas dejan bocas abiertas y rompen récords cada año. Lima 2019 está listo para recibir a los mejores atletas y Para atletas del continente americano. Conoce los deportes Panamericanos y Parapanamericanos que formarán parte de Lima 2019..</p>
+                </div>
+              </div>
+    <div class="container shadow-nonep-3 mb-5  rounded">
+            <ul class="list-group  ">
+                    <a href="#" class="list-group-item list-group-item-action active">
+                            <div class="d-flex w-100 justify-content-between">
+                              <h5 class="mb-1">Lista de deportes</h5>                            
+                            </div>
+                          </a>
+              {% for deporte in deportes %}
+              <a href="#" class="list-group-item list-group-item-action">
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1"> {{ deporte.title }}</h5>                    
+                    </div>
+                  </a>
+              <div class="d-flex w-100 justify-content-between">
+               
+              </div>
+              {% endfor %}
+            </ul>
+            {% bootstrap_javascript jquery='full' %}
+    </div>
+    <div class="jumbotron jumbotron-fluid m-0 bg-warning">
+            <div class="container d-flex justify-content-around">
+              <p class="lead font-weight-bold">Github : soulone </p>
+            </div>
+          </div>
+  </body>
+</html>
